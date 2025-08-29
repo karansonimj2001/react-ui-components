@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .input-base {
+    @apply flex w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .input-filled {
+    @apply bg-gray-100 border-transparent hover:bg-gray-200 focus:bg-white focus:border-blue-500;
+  }
+  
+  .input-outlined {
+    @apply bg-transparent border-gray-300 hover:border-gray-400 focus:border-blue-500;
+  }
+  
+  .input-ghost {
+    @apply bg-transparent border-transparent hover:bg-gray-100 focus:bg-gray-100;
+  }
+  
+  .input-sm {
+    @apply h-8 px-2 text-xs;
+  }
+  
+  .input-md {
+    @apply h-10 px-3 text-sm;
+  }
+  
+  .input-lg {
+    @apply h-12 px-4 text-base;
+  }
+  
+  .input-invalid {
+    @apply border-red-500 focus-visible:ring-red-500;
+  }
+}
